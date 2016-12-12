@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change the hyperlink and the text</title>
+</head>
+<body style="background: antiquewhite">
+<center>
+	<h2 style="color:#ff5722;">Hello AcadGild !!!</h2>
+					<!-- hyperlink and the text -->
+	<a href="https://acadgild.com/course_progress/frontend-web-development-fundamentals-training-certification" >AcadGild My Dashboard</a><br/><br/>
+	<input type="submit" id="change" value="Change Text">
+	<div id="text" style="text-align: center"> <h3>The Text has been Change !!!</h3> </div>
+</center>
+</body>
+
+				<!-- Jquery Library -->
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){  /*DOM Ready Function*/
+	$('#text').hide();
+	$('#change').click(function(){  /*Script for Change Text and Hyperlink*/
+		$("a").attr("href", "https://acadgild.com/");
+        $("a").text("AcadGild Tutorials");
+        $('#text').show();  /*Script for Show Text Message*/
+	});
+});
+	
+</script>
+</html>
